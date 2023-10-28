@@ -1,0 +1,33 @@
+---
+import StemLogo from '../assets/StemLogo.astro'
+import { Icon } from 'astro-iconify';
+---
+
+<header class="flex items-center justify-between p-8">
+  <h1>
+    <a href="/"><StemLogo /></a>
+  </h1>
+  <div class="">
+    <div class="lg:hidden"><button class="w-8 h-8"><Icon pack="solar" name="menu-dots-bold-duotone" title="Menu" /></button></div>
+    <div class="hidden shadow lg:shadow-none p-8 bg-white absolute mt-4 right-8 lg:block lg:static lg:bg-inherit lg:p-0 lg:mt-0">
+      <nav>
+        <ul class="flex flex-col lg:flex-row lg:items-center gap-8 font-bold text-md">
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#board">Board Members</a></li>
+          <li class="mr-4"><a href="#get-involved">Get Involved</a></li>
+          <li>
+            <a class="block w-6 h-6" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com">
+              <Icon pack="ri" name="facebook-fill" class="fill-black" />
+            </a>
+          </li>
+          <li class="mr-4">
+            <a class="block w-6 h-6" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com">
+              <Icon pack="prime" name="instagram" class="fill-black" />
+            </a> 
+          </li>
+          <li><button class="text-xs">Español</button></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

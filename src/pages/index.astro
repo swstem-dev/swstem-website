@@ -1,8 +1,12 @@
 ---
 import StackedSections from '../layouts/StackedSections.astro';
+import SiteHeader from '../sections/SiteHeader.astro';
 import Hero from '../sections/Hero.astro';
 ---
 
 <StackedSections title="Welcome to Astro.">
-	<Hero />
+  <div>
+    <SiteHeader />
+    <Hero />
+  </div>
 </StackedSections>
