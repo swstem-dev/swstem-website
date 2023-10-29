@@ -1,0 +1,12 @@
+---
+
+const { category, title, description, imageSrc } = Astro.props;
+---
+    <button class="border-2 border-gray-200 text-left min-h-[524px] w-[308px] flex flex-col gap-4">
+        <img src={imageSrc} />
+        <div class="px-2">
+            <span class="text-sm">{category}</span>
+            <h3 class="text-xl font-bold mb-8">{title}</h3>
+            <p>{description}</p>
+        </div>
+    </button>

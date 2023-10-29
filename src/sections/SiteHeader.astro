@@ -7,9 +7,9 @@ import { Icon } from 'astro-iconify';
   <h1>
     <a href="/"><StemLogo /></a>
   </h1>
-  <div class="">
-    <div class="lg:hidden"><button class="w-8 h-8"><Icon pack="solar" name="menu-dots-bold-duotone" title="Menu" /></button></div>
-    <div class="hidden shadow lg:shadow-none p-8 bg-white absolute mt-4 right-8 lg:block lg:static lg:bg-inherit lg:p-0 lg:mt-0">
+  <div>
+    <div class="lg:hidden"><button data-menu-button class="w-8 h-8"><Icon pack="solar" name="menu-dots-bold-duotone" title="Menu" /></button></div>
+    <div data-menu class="hidden shadow lg:shadow-none p-8 bg-white absolute mt-4 right-8 lg:block lg:static lg:bg-inherit lg:p-0 lg:mt-0 z-50">
       <nav>
         <ul class="flex flex-col lg:flex-row lg:items-center gap-8 font-bold text-md">
           <li><a href="#programs">Programs</a></li>
@@ -31,3 +31,12 @@ import { Icon } from 'astro-iconify';
     </div>
   </div>
 </header>
+
+<script>
+  const menuButton = document.querySelector('[data-menu-button]');
+  const menu = document.querySelector('[data-menu]');
+
+  menuButton?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>
