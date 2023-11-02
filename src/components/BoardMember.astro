@@ -1,0 +1,20 @@
+---
+import Icon from 'astro-iconify';
+import ContactButton from './ContactButton.astro';
+const { photoSrc, name, title, facebook, twitter, linkedin, instagram, email } = Astro.props;
+---
+
+<div class="flex gap-4 flex-col text-center justify-between">
+    <div><img src={photoSrc} /></div>
+    <div>
+        <h3 class="text-xl">{[name.first, name.last].join(' ')}</h3>
+        <span class="text-lg text-gray-500">{title}</span>
+    </div>
+    <ul class="flex gap-2 justify-center h-12">
+        {facebook && <li><a href={facebook} class="block h-8 w-8"><Icon pack="mdi" name="facebook" title="facebook" /></a></li>}
+        {twitter && <li><a href={twitter} class="block h-8 w-8"><Icon pack="mdi" name="twitter" title="twitter" /></a></li>}
+        {linkedin && <li><a href={linkedin} class="block h-8 w-8"><Icon pack="mdi" name="linkedin" title="linkedin" /></a></li>}
+        {instagram && <li><a href={instagram} class="block h-8 w-8"><Icon pack="mdi" name="instagram" title="instagram" /></a></li>}
+    </ul>
+    <div class="px-12">{email && <ContactButton dark href={`mailto:${email}`} text={`Contact ${name.first}`} />}</div>
+</div>

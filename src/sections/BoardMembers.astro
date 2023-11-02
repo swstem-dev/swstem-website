@@ -1,0 +1,57 @@
+---
+import BoardMember from "../components/BoardMember.astro";
+const boardMembers = [
+    {
+        photoSrc: 'placeholder.jpg', 
+        name: { first: 'Leah', last: 'Goodwin'}, 
+        title: 'Executive Director',
+        facebook: 'placeholder',
+        twitter: 'placeholder',
+        linkedin: 'placeholder',
+        instagram: 'placeholder',
+        email: 'placeholder@swstem.org'
+    },
+{
+        photoSrc: 'placeholder.jpg', 
+        name: { first: 'Edwin', last: 'Flored-Card'}, 
+        title: 'Executive Director',
+        facebook: 'placeholder',
+        twitter: 'placeholder',
+        linkedin: 'placeholder',
+        instagram: 'placeholder',
+        email: 'placeholder@swstem.org'
+    },
+{
+        photoSrc: 'placeholder.jpg', 
+        name: { first: 'Diane', last: 'Russell'}, 
+        title: 'Developer',
+        facebook: 'placeholder',
+        twitter: 'placeholder',
+        linkedin: 'placeholder',
+        instagram: 'placeholder',
+        email: 'placeholder@swstem.org'
+    },
+{
+        photoSrc: 'placeholder.jpg', 
+        name: { first: 'Kristin', last: 'Watson'}, 
+        title: 'Sr. Project Designer',
+        facebook: 'placeholder',
+        twitter: 'placeholder',
+        linkedin: 'placeholder',
+        instagram: 'placeholder',
+        email: 'placeholder@swstem.org'
+    },
+       ];
+---
+
+<section class="px-8">
+    <header class="px-8 py-32 text-center max-w-7xl m-auto">
+        <span class="uppercase font-bold text-xl text-primary-500 mb-4">Board Members</span>
+        <h2 class="text-4xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Bibendum amet at molestie mattis.</h2>
+    </header>
+    <ul class="flex flex-wrap gap-8 items-start justify-center">
+        {boardMembers.map((member) => {
+            return <li><BoardMember {...member} /></li>
+        })}
+    </ul>
+</section>

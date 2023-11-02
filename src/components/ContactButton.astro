@@ -1,0 +1,4 @@
+---
+const { text, href, dark } = Astro.props;
+---
+<a class={`text-center block px-8 py-4 border-2 border-${dark ? 'black' : 'white'}-500 font-bold text-${dark ? 'black' : 'white'}`} href={href}>{text}</a>

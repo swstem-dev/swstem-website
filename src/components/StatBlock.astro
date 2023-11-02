@@ -1,0 +1,9 @@
+---
+import { Icon } from 'astro-iconify';
+const {iconPack, iconName, stat, text} = Astro.props;
+---
+
+<div class="flex flex-col gap-4">
+    <Icon class="w-8 h-8" pack={iconPack} name={iconName} />
+    <p class="flex flex-col gap-4"><strong class="font-bold text-3xl">{stat}</strong>{text}</p>
+</div>

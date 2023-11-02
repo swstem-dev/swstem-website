@@ -3,12 +3,22 @@ import StackedSections from '../layouts/StackedSections.astro';
 import SiteHeader from '../sections/SiteHeader.astro';
 import Hero from '../sections/Hero.astro';
 import Programs from '../sections/Programs.astro';
+import Proof1 from '../sections/Proof1.astro';
+import BoardMembers from '../sections/BoardMembers.astro';
+import Roadmap from '../sections/Roadmap.astro';
+import Footer from '../sections/Footer.astro';
 ---
 
 <StackedSections title="Welcome to Astro.">
-  <div>
-    <SiteHeader />
-    <Hero />
+  <div class="flex flex-col gap-32">
+    <div>
+      <SiteHeader />
+      <Hero />
+    </div>
     <Programs />
+    <Proof1 />
+    <BoardMembers /> 
+    <Roadmap />
+    <Footer />
   </div>
 </StackedSections>
