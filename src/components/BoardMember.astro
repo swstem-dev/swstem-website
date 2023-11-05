@@ -2,12 +2,13 @@
 import Icon from 'astro-iconify';
 import ContactButton from './ContactButton.astro';
 const { photoSrc, name, title, facebook, twitter, linkedin, instagram, email } = Astro.props;
+const fullName = [name.first, name.last].join(' ');
 ---
 
 <div class="flex gap-4 flex-col text-center justify-between">
-    <div><img src={photoSrc} /></div>
+    <div><img src={photoSrc} alt={`photo of ${fullName}`} /></div>
     <div>
-        <h3 class="text-xl">{[name.first, name.last].join(' ')}</h3>
+        <h3 class="text-xl">{fullName}</h3>
         <span class="text-lg text-gray-500">{title}</span>
     </div>
     <ul class="flex gap-2 justify-center h-12">

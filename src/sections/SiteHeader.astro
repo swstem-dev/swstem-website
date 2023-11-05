@@ -14,7 +14,7 @@ import { Icon } from 'astro-iconify';
         <ul class="flex flex-col lg:flex-row lg:items-center gap-8 font-bold text-md">
           <li><a href="#programs">Programs</a></li>
           <li><a href="#board">Board Members</a></li>
-          <li class="mr-4"><a href="#get-involved">Get Involved</a></li>
+          <li class="mr-4"><a href="#roadmap">Get Involved</a></li>
           <li>
             <a class="block w-6 h-6" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com">
               <Icon pack="mdi" name="facebook" class="fill-black" />
@@ -39,4 +39,20 @@ import { Icon } from 'astro-iconify';
   menuButton?.addEventListener('click', () => {
     menu?.classList.toggle('hidden');
   });
+
+  const closeMenu = (e: FocusEvent) => {
+    if(e.target !== menuButton && !menu?.contains(e.target)) {
+      menu?.classList.add('hidden');
+    }
+  }
+
+  document.addEventListener('focusout', closeMenu);
+  document.addEventListener('focusin', closeMenu);
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') {
+      menu?.classList.add('hidden');
+    }
+  })
+
 </script>
