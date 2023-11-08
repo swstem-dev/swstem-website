@@ -7,8 +7,8 @@ export default {
         roboto: ["Roboto", "sans-serif"],
       },
       colors: {
-        "primary-500": "#090962",
-        "secondary-500": "#E46F21",
+        "primary-500": "#060640",
+        "secondary-500": "#ef6f21",
         black: "#282626",
       },
     },
